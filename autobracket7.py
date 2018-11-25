@@ -1,6 +1,5 @@
 from sh import gphoto2 as gp
 import signal, os, subprocess
-from time import sleep
 
 # kill gphoto2 process that starts
 # whenever the camera is connected
@@ -45,7 +44,7 @@ def captureImages():
     captureCommand
     
 
-def bracket9():
+def bracket7():
     exCo1 = 6
     expoComp1 = ["--set-config", "exposurecompensation""=""{}".format(exCo1)]
     step = 1
@@ -62,7 +61,7 @@ def room_photos():
         print("Location {}".format(shots))
         x= input("Are you ready to take the photos: 'y' or 'n' ")
         if x[0].lower() == 'y':
-            bracket9()
+            bracket7()
             shots += 1
         else:
             print('Please try again')
